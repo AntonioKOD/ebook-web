@@ -8,7 +8,7 @@ import { Inter } from "next/font/google"
 const gristela = localFont({
   src: [
     {
-      path: "../public/fonts/Gristela.otf",
+      path: "../public/fonts/gristela.otf",
       weight: "400",
       style: "normal",
     },
