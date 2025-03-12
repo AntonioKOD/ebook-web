@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ChevronRight, CheckCircle, Users, BookOpen, Star, BarChart } from "lucide-react"
 import { ColorfulBadge } from "@/components/colorful-badge"
 import { Logo } from "@/components/logo"
+import bookCover from '@/public/IMG_3346.jpg'
 
 export default function Home() {
   return (
@@ -82,7 +83,7 @@ export default function Home() {
             <div className="relative w-[300px] h-[400px] md:w-[380px] md:h-[500px] lg:w-[450px] lg:h-[600px]">
               <div className="absolute inset-0 bg-gradient-to-r from-accent/20 to-secondary/20 rounded-lg transform rotate-1"></div>
               <Image
-                src="/placeholder.svg?height=600&width=450"
+                src={bookCover}
                 alt="Business Analysis ebook cover"
                 width={450}
                 height={600}

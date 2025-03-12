@@ -1,21 +1,10 @@
 import type React from "react"
 import "@/app/globals.css"
 import type { Metadata } from "next"
-import localFont from "next/font/local"
+
 import { Inter } from "next/font/google"
 
-// Load Gristela font from OTF file
-const gristela = localFont({
-  src: [
-    {
-      path: "../public/fonts/gristela.otf",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-gristela",
-  display: "swap",
-})
+
 
 // Load Inter from Google Fonts
 const inter = Inter({
@@ -43,7 +32,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${gristela.variable} ${inter.variable}`} data-theme="light">
+    <html lang="en" suppressHydrationWarning className={`${inter.variable}`} data-theme="light">
       <head />
       <body>{children}</body>
     </html>
