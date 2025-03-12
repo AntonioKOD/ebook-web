@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Default theme custom properties */
+@theme {
+  /* Our color palette */
+  --color-background: hsl(0, 0%, 100%);
+  --color-foreground: hsl(234, 50%, 11%);
+  --color-card: hsl(0, 0%, 100%);
+  --color-card-foreground: hsl(234, 50%, 11%);
+  --color-popover: hsl(0, 0%, 100%);
+  --color-popover-foreground: hsl(234, 50%, 11%);
+  --color-primary: hsl(234, 50%, 11%); /* Dark Navy #0c1229 */
+  --color-primary-foreground: hsl(0, 0%, 100%);
+  --color-secondary: hsl(236, 45%, 27%); /* Navy Blue #252b63 */
+  --color-secondary-foreground: hsl(0, 0%, 100%);
+  --color-muted: hsl(204, 55%, 92%); /* Light Blue #e0edf5 */
+  --color-muted-foreground: hsl(234, 50%, 11%);
+  --color-accent: hsl(349, 88%, 56%); /* Vibrant Pink #f12d52 */
+  --color-accent-foreground: hsl(0, 0%, 100%);
+  --color-destructive: hsl(0, 84.2%, 60.2%);
+  --color-destructive-foreground: hsl(210, 40%, 98%);
+  --color-border: hsl(242, 6%, 82%); /* Light Gray #cdccd4 */
+  --color-input: hsl(242, 6%, 82%);
+  --color-ring: hsl(349, 88%, 56%);
+  --radius: 0.5rem;
+
+  /* Chart colors */
+  --chart-1: hsl(349, 88%, 56%);
+  --chart-2: hsl(236, 45%, 27%);
+  --chart-3: hsl(234, 50%, 11%);
+  --chart-4: hsl(204, 55%, 92%);
+  --chart-5: hsl(242, 6%, 82%);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Dark theme overrides */
+[data-theme="dark"] {
+  --color-background: hsl(234, 50%, 11%);
+  --color-foreground: hsl(0, 0%, 100%);
+  --color-card: hsl(234, 50%, 11%);
+  --color-card-foreground: hsl(0, 0%, 100%);
+  --color-popover: hsl(234, 50%, 11%);
+  --color-popover-foreground: hsl(0, 0%, 100%);
+  --color-primary: hsl(0, 0%, 100%);
+  --color-primary-foreground: hsl(234, 50%, 11%);
+  --color-secondary: hsl(236, 45%, 27%);
+  --color-secondary-foreground: hsl(0, 0%, 100%);
+  --color-muted: hsl(236, 45%, 27%);
+  --color-muted-foreground: hsl(204, 55%, 92%);
+  --color-accent: hsl(349, 88%, 56%);
+  --color-accent-foreground: hsl(0, 0%, 100%);
+  --color-destructive: hsl(0, 62.8%, 30.6%);
+  --color-destructive-foreground: hsl(210, 40%, 98%);
+  --color-border: hsl(236, 45%, 27%);
+  --color-input: hsl(236, 45%, 27%);
+  --color-ring: hsl(349, 88%, 56%);
+
+  /* Chart colors for dark mode */
+  --chart-1: hsl(349, 78%, 46%);
+  --chart-2: hsl(236, 35%, 37%);
+  --chart-3: hsl(234, 40%, 21%);
+  --chart-4: hsl(204, 45%, 82%);
+  --chart-5: hsl(242, 16%, 72%);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Base styles */
+* {
+  border-color: var(--color-border);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-inter), system-ui, sans-serif;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-gristela), var(--font-inter), system-ui, sans-serif;
+}
+
+.font-gristela {
+  font-family: var(--font-gristela), var(--font-inter), system-ui, sans-serif;
+}
+
+.font-sans {
+  font-family: var(--font-inter), system-ui, sans-serif;
+}
+
